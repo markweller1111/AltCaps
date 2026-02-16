@@ -93,3 +93,9 @@ The keyboard uses stacked `UIStackView` rows to replicate the Apple keyboard str
 ## 2. Key Input Handling
 ```swift
 @objc private func keyTapped(_ sender: UIButton)
+
+-
+## License (Suggested)
+
+Copyright © 2026 aLtCaPs Keyboard
+All rights reserved.
