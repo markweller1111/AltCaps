@@ -19,7 +19,7 @@ struct EnableInstructionsView: View {
                 Text("1. Open the Settings app")
                 Text("2. Go to General → Keyboard → Keyboards")
                 Text("3. Tap 'Add New Keyboard'")
-                Text("4. Select 'AltCaps Keyboard'")
+                Text("4. Select 'AltCaps'")
                 Text("5. Switch keyboards using the 🌐 globe key")
             }
             .font(.body)
