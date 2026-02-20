@@ -129,9 +129,19 @@ class KeyboardViewController: UIInputViewController {
     }
 
     private func createSystemKey(title: String, width: CGFloat) -> UIButton {
-        let button = createKeyButton(title: title)
-        button.widthAnchor.constraint(equalToConstant: width).isActive = true
+        let button = UIButton(type: .system)
+        button.setTitle(title, for: .normal)
         button.backgroundColor = UIColor.systemGray4
+        button.setTitleColor(.label, for: .normal)
+        button.layer.cornerRadius = 6
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        button.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        button.widthAnchor.constraint(equalToConstant: width).isActive = true
+
+        // Only animation, NOT keyTapped
+        button.addTarget(self, action: #selector(keyDown(_:)), for: .touchDown)
+        button.addTarget(self, action: #selector(keyUp(_:)), for: [.touchUpInside, .touchDragExit])
+
         return button
     }
 
